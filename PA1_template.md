@@ -171,6 +171,20 @@ newActivityData$day <- ifelse ((weekdays(as.Date(newActivityData$date))
                             %in% c('Saturday','Sunday')), 'Weekend', 'Weekday')
 ```
 
+##### new structure of the updated newActivityData
+
+```r
+str(newActivityData)
+```
+
+```
+## 'data.frame':	17568 obs. of  4 variables:
+##  $ steps   : num  37.4 37.4 37.4 37.4 37.4 ...
+##  $ date    : Factor w/ 61 levels "2012-10-01","2012-10-02",..: 1 1 1 1 1 1 1 1 1 1 ...
+##  $ interval: int  0 5 10 15 20 25 30 35 40 45 ...
+##  $ day     : chr  "Weekday" "Weekday" "Weekday" "Weekday" ...
+```
+
 ##### Plot the average number of steps taken per 5 minute interval across all 
 ##### days grouped by weekday and weekend
 
@@ -180,4 +194,4 @@ qplot(interval, steps,
       facets = .~day, geom="line")
 ```
 
-![plot of chunk unnamed-chunk-15](./PA1_template_files/figure-html/unnamed-chunk-15.png) 
+![plot of chunk unnamed-chunk-16](./PA1_template_files/figure-html/unnamed-chunk-16.png) 

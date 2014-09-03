@@ -116,6 +116,11 @@ newActivityData$day <- ifelse ((weekdays(as.Date(newActivityData$date))
                             %in% c('Saturday','Sunday')), 'Weekend', 'Weekday')
 ```
 
+##### new structure of the updated newActivityData
+```{r}
+str(newActivityData)
+```
+
 ##### Plot the average number of steps taken per 5 minute interval across all 
 ##### days grouped by weekday and weekend
 ```{r}
